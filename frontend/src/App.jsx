@@ -5,6 +5,7 @@ import MyBlogs from './components/pages/MyBlogs'
 import Activity from './components/pages/Activity'
 import Layout from './components/layout/Layout'
 import ErrorPage from './components/pages/ErrorPage'
+import Create from './components/pages/Create'
 
 const App = () => {
 
@@ -17,7 +18,12 @@ const App = () => {
         children: [
           {
             path: '/',
-            element: <Home />
+            element: <Home />,
+            index: true,
+          },
+          {
+            path: '/create',
+            element: <Create />
           },
           {
             path: '/myblogs',
