@@ -1,8 +1,6 @@
 import axios from 'axios';
 import BackendServer from '../config/config'
 
-const API_URL = 'http://localhost:5000/api/blogs'; // Update with your actual backend URL
-
 const addBlog = async (blogData) => {
   try {
     console.log("In service:- ", blogData);

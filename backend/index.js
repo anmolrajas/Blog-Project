@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const connectMongoDB = require('./connection')
 const blogRoutes = require('./routes/blogRoutes')
+const userRoutes = require('./routes/userRoutes')
 const app = express();
 const PORT = 8000;
 
@@ -16,6 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/blogs', blogRoutes);
+app.use('/api/users', userRoutes);
 
 app.get('/', (req, res) => {
     return res.end('Hello from server');
